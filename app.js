@@ -1,16 +1,19 @@
 const express = require('express');
 const chalk = require('chalk');
 const debug = require('debug')('app');
-// const morgan = require('morgan');
-const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT|| 5000;
+//Middleware for body parser
+// parse application/json
+app.use(bodyParser.json());
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
-//Middleware for Morgan
-// app.use(morgan('tiny'));
 
+const path = require('path');
 
 //Middleware for static folders in Public
 app.use(express.static(path.join(__dirname, '/public')));
@@ -29,11 +32,13 @@ const nav = [
 
 const adminRouter = require('./src/routes/adminRoutes')(nav);
 const bookRouter = require('./src/routes/bookRoutes')(nav);
+const authRouter = require('./src/routes/authRoutes')();
 
 
 ///BOOKS ROUTE
 app.use('/books',bookRouter);
 app.use('/admin',adminRouter);
+app.use('/auth',authRouter);
 
 //Index page Route
 app.get('/',(req,res)=>{
