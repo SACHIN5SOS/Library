@@ -105,7 +105,7 @@
 
 
             <!--/stories-->
-            <%for(let i=0;i<books.length;i++)
+            <%for(let i=0;i<booksArray.length;i++)
             {%>
             <div class="row">
               <br>
@@ -116,15 +116,15 @@
                 </a>
               </div>
               <div class="col-md-10 col-sm-9">
-                <h3><%=books[i].title%></h3>
+                <h3><%=booksArray[i].title%></h3>
                 <div class="row">
                   <div class="col-xs-9">
                     <h4>
-                      <span class="label label-default"><%=books[i].author%></span>
+                      <span class="label label-default"><%=booksArray[i].author%></span>
                     </h4>
                     <h4>
                       <small style="font-family:courier,'new courier';" class="text-muted">Yesterday •
-                        <a href="/books/<%=i%>" class="text-muted">Read More</a>
+                        <a href="/books/<%=booksArray[i]._id%>" class="text-muted">Read More</a>
                       </small>
                     </h4>
                   </div>

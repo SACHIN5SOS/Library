@@ -1,22 +1,15 @@
 const express = require('express');
 const chalk = require('chalk');
 const debug = require('debug')('app');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
 const port = process.env.PORT|| 5000;
 
-//Importing Routes
-const nav = [            
-    {name:'Books',link: '/books'},
-    {name:'Authors',link:'/authors'}
-]
-
-const bookRouter = require('./src/routes/bookRoutes')(nav);
 
 //Middleware for Morgan
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
 
 
 //Middleware for static folders in Public
@@ -25,8 +18,22 @@ app.set('views','./src/views');
 app.set('view engine','ejs');
 
 
+//Importing Routes
+const nav = [            
+    {name:'Books',link: '/books'},
+    {name:'Authors',link:'/authors'}
+]
+
+
+
+
+const adminRouter = require('./src/routes/adminRoutes')(nav);
+const bookRouter = require('./src/routes/bookRoutes')(nav);
+
+
 ///BOOKS ROUTE
 app.use('/books',bookRouter);
+app.use('/admin',adminRouter);
 
 //Index page Route
 app.get('/',(req,res)=>{
