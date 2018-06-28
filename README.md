@@ -6,5 +6,5 @@
 > Bootstrap template is used in frontend
 > This is a basic project for testing local strategy of passport with express.route
 
-!(images/screenshot1.png)
+<img src="images/screenshot1.png" />
 !(images/screenshot2.png)
