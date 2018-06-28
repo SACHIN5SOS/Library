@@ -10,30 +10,35 @@ const books=[
         title:"Little Prince",
         genere:"Fiction",
         author:"Antoine de Saint-Exupéry",
+        bookId: 157993,
         read:false
     },
     {
         title:"Eat Pray Love",
         genere:"Memoir",
         author:"Elizabeth Gilbert",
+        bookId:19501,
         read:false
     },
     {
         title:"The Secret",
         genere:"Spirtuality",
         author:"Rhonda Byrne",
+        bookId:52529,
         read:false
     },
     {
         title:"Life of Pie",
         genere:"Fiction",
         author:"Yann Martel",
+        bookId:4214,
         read:false
     },
     {
         title:"The Book of the Dun Cow",
         genere:"Fantasy Fiction",
         author:"Walter Wangerin Jr.",
+        bookId:77721,
         read:false
     }    
 ]

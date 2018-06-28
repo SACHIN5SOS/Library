@@ -6,12 +6,12 @@
 		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -93,10 +93,10 @@
           <!--/stories-->
           <div class="row form-row justify-content-center">    
             <div class="col-md-6 col-sm-12 form-layout ">
-              <h3>Sign Up! Or <a href="/auth/signin">SignIn</a></h3>
-              <br>
-              <br>
-              <form name="signupForm" action="/auth/signUp" method="post">
+            <h3>Sign In</h3>
+            <br>
+            <Br>
+              <form name="signinForm" action="/auth/signin" method="post">
                 <div class="form-group">
                   <label for="username">Username</label>
                     <input name="username" class="form-control" id="username" placeholder="Enter Username">
@@ -105,7 +105,7 @@
                   <label for="password">Password</label>
                   <input name="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <input type="submit" class="btn btn-primary" value="Sign up" />
+                <input type="submit" class="btn btn-primary" value="LogIn" />
               </form>
             </div>
 
@@ -157,7 +157,7 @@
   </div>
 </footer>
 	<!-- script references -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 	</body>
 </html>
